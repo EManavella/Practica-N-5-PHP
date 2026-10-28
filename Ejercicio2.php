@@ -1,30 +1,4 @@
 <?php
-/* ============================================================================
-   PRÁCTICA N°5 - PHP: función mail(), variables de sesión | EJERCICIO 2
-   Consigna: confeccionar una página de Contacto que presente un formulario
-   para que los visitantes puedan enviar consultas al webmaster.
-
-   CÓMO FUNCIONA
-   Es una página que se procesa a sí misma (como el Documento 2 de la Práctica 4):
-   - Si se entra por primera vez (método GET), muestra el formulario.
-   - Si se envía (método POST), valida los datos. Si hay errores, vuelve a
-     mostrar el formulario con los mensajes y con los datos ya escritos. Si
-     está todo bien, arma el correo, lo envía al webmaster con mail() y
-     muestra un mensaje de confirmación.
-   - Validaciones: los campos obligatorios no pueden estar vacíos y el correo
-     del visitante tiene que tener un formato válido.
-   - Seguridad (ver mail_comun.php): los datos que van a las cabeceras se
-     limpian de saltos de línea (inyección de cabeceras) y todo lo que se
-     muestra se escapa con h() (XSS).
-   - El correo sale desde una dirección fija del sitio (EMAIL_REMITENTE) y se
-     usa Reply-To con el correo del visitante: así el webmaster responde
-     directo al visitante y el servidor no "falsifica" un remitente ajeno.
-   - Como el formulario no tiene atributo action, se envía a la misma página.
-   - Un formulario público puede recibir spam; en un sitio real conviene sumar
-     un captcha o un límite de envíos.
-
-   ANTES DE USAR: configurar las constantes de mail_comun.php.
-   ============================================================================ */
 
 require_once 'Mail comun.php';
 
